@@ -5,3 +5,4 @@ dev-model.gql
 
 # Local Netlify folder
 .netlify
+.env

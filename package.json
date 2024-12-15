@@ -16,6 +16,7 @@
     "@trpc/client": "11.0.0-rc.477",
     "@trpc/react-query": "11.0.0-rc.477",
     "@trpc/server": "11.0.0-rc.477",
+    "axios": "^1.7.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "zod": "^3.24.1"
