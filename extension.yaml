@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://sdk.netlify.com/sdk/config-schema.json
 config:
-  slug: falkordb
+  slug: t36-674x-netlify-falkordb-integration
   name: falkordb
   
   scopes:
