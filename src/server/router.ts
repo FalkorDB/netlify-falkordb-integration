@@ -193,7 +193,7 @@ export const appRouter = router({
       .input(addInstanceSchema)
       .mutation(
         async ({
-          ctx: { account, teamId, siteId, client },
+          ctx: { teamId, siteId, client,  },
           input: { instanceId, username, password },
         }) => {
           if (!teamId) {
@@ -307,7 +307,7 @@ export const appRouter = router({
           // set variables
           try {
             await client.createOrUpdateVariables({
-              accountId: account.id,
+              accountId: teamId,
               siteId,
               variables: {
                 [`${envVarPrefix}HOSTNAME`]: instance.hostname || "",
@@ -330,7 +330,7 @@ export const appRouter = router({
 
     remove: procedure
       .input(z.object({ instanceId: z.string() }))
-      .mutation(async ({ ctx: { account, teamId, siteId, client }, input }) => {
+      .mutation(async ({ ctx: { teamId, siteId, client }, input }) => {
         if (!teamId) {
           throw new TRPCError({
             code: "BAD_REQUEST",
@@ -387,7 +387,7 @@ export const appRouter = router({
         // remove variables
         try {
           await client.deleteEnvironmentVariables({
-            accountId: account.id,
+            accountId: teamId,
             siteId,
             variables: [
               `${envVarPrefix}HOSTNAME`,
