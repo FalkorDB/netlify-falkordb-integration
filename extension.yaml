@@ -4,7 +4,7 @@ config:
   name: falkordb
   description: "The Data Backbone of Intelligent AI Solutions"
   visibility:
-    isPrivate: true
+    isPrivate: false
 
   scopes:
     env: ["read", "write", "delete"]
