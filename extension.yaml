@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://developers.netlify.com/sdk/config-schema.json
+# yaml-language-server: $schema=https://sdk.netlify.com/config-schema.json
 config:
   slug: t36-674x-netlify-falkordb-integration
   name: falkordb
@@ -7,13 +7,10 @@ config:
     isPrivate: true
 
   scopes:
-    site: ["read", "write"]
     env: ["read", "write", "delete"]
-    user: ["read", "write"]
 
   use_cjs_shims: false
 
   ui:
     surfaces:
-      - extension-team-configuration
       - extension-top-level-site-configuration

@@ -9,12 +9,15 @@ import {
   Button,
   Select,
   CardFooter,
+  DecorativeIcon,
+  CodeBlock,
 } from "@netlify/sdk/ui/react/components";
 import { trpc } from "../trpc";
 import { siteSettingsSchema } from "../../schema/site-configuration";
 import { addInstanceSchema } from "../../schema/falkordb-instance";
 import type { FalkorDBInstance } from "../../schema/falkordb-instance";
 import { useState } from "react";
+import { generateClientCode } from "../../utils";
 
 export const Loading = () => {
   return (
@@ -76,6 +79,68 @@ export const ConnectAccount = ({
   );
 };
 
+export const InstanceCard = ({
+  instance,
+  removeInstanceCallback,
+}: {
+  instance: FalkorDBInstance;
+  removeInstanceCallback: any;
+}) => {
+  const [showSnippet, setShowSnippet] = useState(false);
+
+  const deleteInstanceMutation = trpc.instances.remove.useMutation({
+    onSettled: () => {
+      removeInstanceCallback();
+    },
+  });
+
+  return (
+    <Card>
+      <CardTitle>{instance.name}</CardTitle>
+      <p>
+        <b>Instance ID: </b>
+        {instance.id}
+      </p>
+      <p>
+        <b>Cloud Provider: </b>
+        {instance.cloudProvider}
+      </p>
+      <p>
+        <b>Region: </b>
+        {instance.region}
+      </p>
+      <div className="tw-mt-4">
+        <label
+          onClick={() => setShowSnippet(!showSnippet)}
+          className="tw-cursor-pointer"
+        >
+          <DecorativeIcon
+            name="caret-down"
+            className={showSnippet ? "tw-rotate-180" : ""}
+          ></DecorativeIcon>{" "}
+          {showSnippet ? "Hide" : "Show"} snippet
+        </label>
+        {showSnippet && (
+          <CodeBlock content={generateClientCode(instance.idx)} language="ts"></CodeBlock>
+        )}
+      </div>
+      <CardFooter>
+        <Button
+          variant="danger"
+          loading={deleteInstanceMutation.isPending}
+          onClick={() =>
+            deleteInstanceMutation.mutateAsync({
+              instanceId: instance.id,
+            })
+          }
+        >
+          Remove
+        </Button>
+      </CardFooter>
+    </Card>
+  );
+};
+
 export const InstancesList = ({
   instances,
   addInstanceButtonCallback,
@@ -85,12 +150,6 @@ export const InstancesList = ({
   addInstanceButtonCallback: any;
   removeInstanceCallback: any;
 }) => {
-  const deleteInstanceMutation = trpc.instances.remove.useMutation({
-    onSettled: () => {
-      removeInstanceCallback();
-    },
-  });
-
   if (!instances.length) {
     return (
       <div className="tw-text-center tw-my-4">
@@ -105,24 +164,11 @@ export const InstancesList = ({
     <div>
       {instances.map((instance) => {
         return (
-          <Card>
-            <CardTitle>{instance.name}</CardTitle>
-            <p><b>Instance ID: </b>{instance.id}</p>
-            <p><b>Cloud Provider: </b>{instance.cloudProvider}</p>
-            <p><b>Region: </b>{instance.region}</p>
-            <CardFooter>
-              <Button
-                variant="danger"
-                onClick={() =>
-                  deleteInstanceMutation.mutateAsync({
-                    instanceId: instance.id,
-                  })
-                }
-              >
-                Remove
-              </Button>
-            </CardFooter>
-          </Card>
+          <InstanceCard
+            key={instance.id}
+            instance={instance}
+            removeInstanceCallback={() => removeInstanceCallback()}
+          ></InstanceCard>
         );
       })}
     </div>

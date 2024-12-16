@@ -193,7 +193,7 @@ export const appRouter = router({
       .input(addInstanceSchema)
       .mutation(
         async ({
-          ctx: { teamId, siteId, client,  },
+          ctx: { teamId, siteId, client },
           input: { instanceId, username, password },
         }) => {
           if (!teamId) {
@@ -304,27 +304,127 @@ export const appRouter = router({
 
           const envVarPrefix = i === 0 ? "FALKORDB_" : `FALKORDB_${i}_`;
 
-          // set variables
-          try {
-            await client.createOrUpdateVariables({
+          const promises = [];
+
+          promises.push(
+            client.createEnvironmentVariable({
               accountId: teamId,
               siteId,
-              variables: {
-                [`${envVarPrefix}HOSTNAME`]: instance.hostname || "",
-                [`${envVarPrefix}PORT`]: `${instance.port || ""}`,
-                [`${envVarPrefix}USERNAME`]: username,
-                [`${envVarPrefix}PASSWORD`]: password,
-              },
+              key: `${envVarPrefix}HOSTNAME`,
+              values: [
+                {
+                  value: instance.hostname || "",
+                  context: "all",
+                },
+              ],
+            }),
+            client.createEnvironmentVariable({
+              accountId: teamId,
+              siteId,
+              key: `${envVarPrefix}PORT`,
+              values: [
+                {
+                  value: `${instance.port || ""}`,
+                  context: "all",
+                },
+              ],
+            }),
+
+            client.createEnvironmentVariable({
+              accountId: teamId,
+              siteId,
+              key: `${envVarPrefix}USERNAME`,
+              values: [
+                {
+                  value: `${username}`,
+                  context: "all",
+                },
+              ],
+            }),
+            client.createEnvironmentVariable({
+              accountId: teamId,
+              siteId,
+              key: `${envVarPrefix}PASSWORD`,
               isSecret: true,
-            });
-          } catch (error) {
-            console.error("Failed to set environment variables", error);
-            throw new TRPCError({
-              code: "INTERNAL_SERVER_ERROR",
-              message: "Failed to set environment variables",
-              cause: error,
-            });
-          }
+              scopes: ["builds", "functions", "runtime"],
+              values: [
+                {
+                  value: `${password}`,
+                  context: "dev",
+                },
+                {
+                  value: `${password}`,
+                  context: "production",
+                },
+                {
+                  value: `${password}`,
+                  context: "branch-deploy",
+                },
+                {
+                  value: `${password}`,
+                  context: "deploy-preview",
+                },
+              ],
+            })
+          );
+
+          await Promise.all(promises);
+
+          // // set variables
+          // const promises = [];
+          // promises.push(
+          //   client
+          //     .createOrUpdateVariables({
+          //       accountId: teamId,
+          //       siteId,
+          //       variables: {
+          //         [`${envVarPrefix}HOSTNAME`]: instance.hostname || "",
+          //         [`${envVarPrefix}PORT`]: `${instance.port || ""}`,
+          //         [`${envVarPrefix}USERNAME`]: username,
+          //       },
+          //       scopes: ["all"],
+          //     })
+          //     .catch((error) => {
+          //       console.error("Failed to set environment variables", error);
+          //       throw new TRPCError({
+          //         code: "INTERNAL_SERVER_ERROR",
+          //         message: "Failed to set environment variables",
+          //         cause: error,
+          //       });
+          //     })
+          // );
+
+          // promises.push(
+          //   client
+          //     .createOrUpdateVariable({
+          //       accountId: teamId,
+          //       siteId,
+          //       key: `${envVarPrefix}PASSWORD`,
+          //       value: password,
+          //       isSecret: true,
+          //     })
+          //     .catch((error) => {
+          //       console.error("Failed to set secrets", error);
+          //       throw new TRPCError({
+          //         code: "INTERNAL_SERVER_ERROR",
+          //         message: "Failed to set secrets",
+          //         cause: error,
+          //       });
+          //     })
+          // );
+
+          // const response = await Promise.allSettled(promises);
+
+          // const exceptions = response.filter(
+          //   (result) => result.status === "rejected"
+          // );
+          // if (exceptions.length > 0) {
+          //   throw new TRPCError({
+          //     code: "INTERNAL_SERVER_ERROR",
+          //     message: "Failed to set environment variables",
+          //     cause: exceptions.map((e) => e.reason).join("\n"),
+          //   });
+          // }
         }
       ),
 

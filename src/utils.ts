@@ -1,6 +1,9 @@
 import axios from "axios";
 import z from "zod";
-import { falkordbInstanceSchema, type FalkorDBInstance } from "./schema/falkordb-instance.js";
+import {
+  falkordbInstanceSchema,
+  type FalkorDBInstance,
+} from "./schema/falkordb-instance.js";
 
 export const getFalkorDBAdminToken = async () => {
   try {
@@ -12,7 +15,6 @@ export const getFalkorDBAdminToken = async () => {
         },
       }
     );
-    console.log("response", response);
 
     return response.data;
   } catch (error) {
@@ -41,7 +43,6 @@ export const getFalkorDBUserToken = async (
         },
       }
     );
-    console.log("response", response);
 
     return response.data.jwtToken;
   } catch (error) {
@@ -70,7 +71,6 @@ export const getUserSubscriptions = async (
         },
       }
     );
-    console.log("response", response);
 
     return response.data.ids;
   } catch (error) {
@@ -93,21 +93,41 @@ export const getUserInstancesInSubscription = async (
       }
     );
 
-    console.log("response", response.data);
-    
-
     return (
       response.data?.resourceInstances
-        ?.map((instance: any) => ({
-          id: instance["consumptionResourceInstanceResult"].id,
-          name:
-            instance["consumptionResourceInstanceResult"]?.["result_params"]
-              ?.name ?? "",
-          cloudProvider:
-            instance["consumptionResourceInstanceResult"].cloud_provider,
-          region: instance["consumptionResourceInstanceResult"].region,
-          status: instance["consumptionResourceInstanceResult"].status,
-        }))
+        ?.map((instance: any) => {
+          const resourceKey = Object.entries(
+            instance["consumptionResourceInstanceResult"]?.[
+              "detailedNetworkTopology"
+            ] ?? {}
+          ).filter(
+            ([_, value]) =>
+              (value as any)?.["clusterEndpoint"] &&
+              !(value as any)?.["resourceName"]?.startsWith("Omnistrate")
+          )[0][0] as string;
+
+          return {
+            id: instance["consumptionResourceInstanceResult"].id,
+            name:
+              instance["consumptionResourceInstanceResult"]?.["result_params"]
+                ?.name ?? "",
+            cloudProvider:
+              instance["consumptionResourceInstanceResult"].cloud_provider,
+            region: instance["consumptionResourceInstanceResult"].region,
+            status: instance["consumptionResourceInstanceResult"].status,
+            username:
+              instance["consumptionResourceInstanceResult"]?.["result_params"]
+                ?.username ?? "",
+            hostname:
+              instance["consumptionResourceInstanceResult"]?.[
+                "detailedNetworkTopology"
+              ]?.[resourceKey]?.["clusterEndpoint"] ?? "",
+            port:
+              instance["consumptionResourceInstanceResult"]?.[
+                "detailedNetworkTopology"
+              ]?.[resourceKey]?.["clusterPorts"]?.[0] ?? 0,
+          };
+        })
         .filter((instance: any) => instance.status === "RUNNING") ?? []
     );
   } catch (error) {
@@ -115,7 +135,6 @@ export const getUserInstancesInSubscription = async (
     throw (error as any).response.data;
   }
 };
-
 
 export const getAllUserInstances = async (
   adminToken: string,
@@ -135,62 +154,26 @@ export const getAllUserInstances = async (
     console.error("error", error);
     throw (error as any).response.data;
   }
-}
+};
 
-export const getInstance = async (
-  adminToken: string,
-  instanceId: string
-): Promise<{
-  id: string;
-  name: string;
-  cloudProvider: string;
-  region: string;
-  hostname: string;
-  port: number;
-  username: string;
-}> => {
-  try {
-    const response = await axios.get(
-      `https://api.omnistrate.cloud/2022-09-01-00/fleet/service/${process.env.FALKORDB_SERVICE_ID}/environment/${process.env.FALKORDB_ENVIRONMENT_ID}/instance/${instanceId}`,
-      {
-        headers: {
-          Authorization: `Bearer ${adminToken}`,
-        },
-      }
-    );
+export const generateClientCode = (idx: number) => {
+  const prefix = idx > 0 ? `FALKORDB_${idx}_` : "FALKORDB_";
+  return `
+    import FalkorDB from "falkordb";
 
-    const data = response.data;
+    const client = await FalkorDB.connect({
+      socket: {
+        host: process.env.${prefix}HOSTNAME,
+        port: process.env.${prefix}PORT,
+      },
+      username: process.env.${prefix}USER,
+      password: process.env.${prefix}PASSWORD
+    });
 
-    const resourceKey = Object.entries(
-      data["consumptionResourceInstanceResult"]?.["detailedNetworkTopology"] ??
-        {}
-    ).filter(
-      ([_, value]) =>
-        (value as any)?.["clusterEndpoint"] &&
-        !(value as any)?.["resourceName"]?.startsWith("Omnistrate")
-    )[0][0] as string;
+    const graph = client.graph("my_graph");
 
-    return {
-      id: data["consumptionResourceInstanceResult"].id,
-      name:
-        data["consumptionResourceInstanceResult"]?.["result_params"]?.name ??
-        "",
-      cloudProvider: data["consumptionResourceInstanceResult"].cloud_provider,
-      region: data["consumptionResourceInstanceResult"].region,
-      username:
-        data["consumptionResourceInstanceResult"]?.["result_params"]
-          ?.username ?? "",
-      hostname:
-        data["consumptionResourceInstanceResult"]?.[
-          "detailedNetworkTopology"
-        ]?.[resourceKey]?.["clusterEndpoint"] ?? "",
-      port:
-        data["consumptionResourceInstanceResult"]?.[
-          "detailedNetworkTopology"
-        ]?.[resourceKey]?.["clusterPorts"]?.[0] ?? 0,
-    };
-  } catch (error) {
-    console.error("error", error);
-    throw (error as any).response.data;
-  }
+    const query = await graph.query("CREATE (n:Person {name: 'Bob'})");
+
+    client.close();
+  `;
 };
