@@ -22,7 +22,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@netlify/netlify-plugin-netlify-extension": "^1.0.3",
+    "@netlify/netlify-plugin-netlify-extension": "^1.2.2",
     "@tsconfig/node18": "^18.2.6",
     "@tsconfig/recommended": "^1.0.13",
     "@tsconfig/strictest": "^2.0.8",
