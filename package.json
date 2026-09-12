@@ -18,7 +18,7 @@
     "@trpc/server": "11.0.0-rc.477",
     "axios": "^1.19.0",
     "react": "^19.2.8",
-    "react-dom": "^19.0.0",
+    "react-dom": "^19.2.8",
     "zod": "^3.24.1"
   },
   "devDependencies": {
@@ -28,7 +28,7 @@
     "@tsconfig/strictest": "^2.0.8",
     "@tsconfig/vite-react": "^3.4.0",
     "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.0.2",
+    "@types/react-dom": "^19.2.7",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.5.4",
     "netlify-cli": "^17.38.0",
