@@ -13,7 +13,7 @@ importers:
         version: 2.8.2
       '@netlify/sdk':
         specifier: ^2.14.1
-        version: 2.14.1(@google-cloud/storage@5.20.5(supports-color@9.4.0))(@trpc/server@11.0.0-rc.477)(@types/react@19.2.18)(autoprefixer@10.5.4(postcss@8.5.20))(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(postcss@8.5.20)(react-dom@19.0.0(react@19.2.8))(react@19.2.8)(supports-color@9.4.0)(tailwindcss@3.4.16(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2)))(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2))
+        version: 2.14.1(@google-cloud/storage@5.20.5(supports-color@9.4.0))(@trpc/server@11.0.0-rc.477)(@types/react@19.2.18)(autoprefixer@10.5.4(postcss@8.5.20))(debug@4.3.7(supports-color@9.4.0))(graphql@16.10.0)(postcss@8.5.20)(react-dom@19.0.0(react@19.2.8))(react@19.2.8)(supports-color@9.4.0)(tailwindcss@3.4.16(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2)))(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2))
       '@octokit/core':
         specifier: ^3.6.0
         version: 3.6.0
@@ -31,7 +31,7 @@ importers:
         version: 11.0.0-rc.477
       axios:
         specifier: ^1.20.0
-        version: 1.20.0(debug@2.6.9(supports-color@9.4.0))(supports-color@9.4.0)
+        version: 1.20.0(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)
       react:
         specifier: ^19.2.8
         version: 19.2.8
@@ -2589,8 +2589,8 @@ packages:
     resolution: {integrity: sha512-lGe34o6EHj9y3Kts9R4ZYs/Gr+6N7MCaMlIFA3F1R2O5/m7K06AxfSeO5530PEERE6/WyEg3lsuyw4GHlPZHog==}
     engines: {node: ^4.5.0 || >= 5.9}
 
-  baseline-browser-mapping@2.11.16:
-    resolution: {integrity: sha512-H/bNPUFHewJHyCTdjn1n3Pit5+2GmWT6mmeHImPX+8MA9NA6b67jO4gYmi4jTbCJb2otq34KMZnovndDPqJwhQ==}
+  baseline-browser-mapping@2.11.30:
+    resolution: {integrity: sha512-YJs6Pz17RMNv8HoyKREtCY38E3BV1nPkWVmIb+XN1uHC1Vqt3KZCH/uJH9ZKRoiKb/icZ6tvehyee6RZNbFfRA==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -2663,13 +2663,8 @@ packages:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
     engines: {node: '>=8'}
 
-  browserslist@4.24.3:
-    resolution: {integrity: sha512-1CPmv8iobE2fyRMV97dAcMVegvvWKxmq94hkLiAkUGwKVTyDLw33K+ZxiFrREKmmps4rIw6grcCFCnTMSZ/YiA==}
-    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
-    hasBin: true
-
-  browserslist@4.28.8:
-    resolution: {integrity: sha512-V2NpofLblG64mfOtSgDhOJESZEGogzDMBv/q+W6oc4LXWP/q75eOXoOaaOu1EOadB9U4Bwx/e0yzbvwKH8zalA==}
+  browserslist@4.29.4:
+    resolution: {integrity: sha512-2TcbbiwXEq+N0kD36tykpCfyyQigUXmuwNQbnPp4Xk4PX9JOqVIKjJlIDjpH7uY6tmRGoAd+apeT1p60T8wsdA==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
@@ -2773,11 +2768,11 @@ packages:
     resolution: {integrity: sha512-8WB3Jcas3swSvjIeA2yvCJ+Miyz5l1ZmB6HFb9R1317dt9LCQoswg/BGrmAmkWVEszSrrg4RwmO46qIm2OEnSA==}
     engines: {node: '>=16'}
 
-  caniuse-lite@1.0.30001688:
-    resolution: {integrity: sha512-Nmqpru91cuABu/DTCXbM2NSRHzM2uVHfPnhJ/1zEAJx/ILBRVmz3pzH4N7DZqbdG0gWClsCC05Oj0mJ/1AWMbA==}
-
   caniuse-lite@1.0.30001809:
     resolution: {integrity: sha512-xxWVywk6a6Arlk+hymeycyn/VgqEfLDxupvhH/xiY5SJ/18kmi9o6MiO320DCUzypORHLtvh0I4i04tUhCNHNQ==}
+
+  caniuse-lite@1.0.30001818:
+    resolution: {integrity: sha512-XJbgo4adscw7R4MZU4/qVFkoMyPaNUAWmdNY4o/k9x7fFwmv4frIlndI9lWuaxviW9ObiZel9LuncnQPn6hQ5A==}
 
   capture-stack-trace@1.0.2:
     resolution: {integrity: sha512-X/WM2UQs6VMHUtjUDnZTRI+i1crWteJySFzr9UpGoQa4WQffXVTTXuekjl7TjZRlcF2XfjgITT0HxZ9RnxeT0w==}
@@ -3507,11 +3502,8 @@ packages:
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  electron-to-chromium@1.5.411:
-    resolution: {integrity: sha512-gglkxzokjHfawpGxq75XdBV2/l3BAPzrsMs70qgaZdTW5rpV1tC4MdgJVP9fN126bODA4ZJQkn1wryEzJyQXIg==}
-
-  electron-to-chromium@1.5.73:
-    resolution: {integrity: sha512-8wGNxG9tAG5KhGd3eeA0o6ixhiNdgr0DcHWm85XPCphwZgD1lIEoi6t3VERayWao7SF7AAZTw6oARGJeVjH8Kg==}
+  electron-to-chromium@1.5.463:
+    resolution: {integrity: sha512-nVWNU6ltFjopvOdD44J4zoBkgO0M+WZiFKKFV7EjebOH9z0KNphk6bCEjplXtJofL21ARIuuwWOCsFkBVklm6w==}
 
   emoji-regex-xs@1.0.0:
     resolution: {integrity: sha512-LRlerrMYoIDrT6jgpeZ2YYl/L8EulRTt5hQcYjy5AInh7HWXKimpqx68aknBFpGL2+/IcogTcaydJEgaTmOpDg==}
@@ -5572,11 +5564,8 @@ packages:
     resolution: {integrity: sha512-jY5dPJzw6NHd/KPSfPKJ+IHoFS81/tJ43r34ZeNMXGzCOM8jwQDCD12HYayKIB6MuznrnqIYy2e891NA2g0ibA==}
     engines: {node: '>=0.10.0'}
 
-  node-releases@2.0.19:
-    resolution: {integrity: sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw==}
-
-  node-releases@2.0.53:
-    resolution: {integrity: sha512-D9UOmYG3UH1V+ENW56t5QXBwJw1YEY18ruVeus89Rw+SyIgjPkCO84bRzO3uNIYosJbNwiabWVn48o3uJLjxFQ==}
+  node-releases@2.0.59:
+    resolution: {integrity: sha512-5qr2okC4ItAI0hG5SaV0HoYMpnM/Y6+Oqr7AmPYy/2uEoGvS+GbSKLeRxSS1uAdu59yz0ouzcuXievSgg///WA==}
     engines: {node: '>=18'}
 
   node-source-walk@6.0.2:
@@ -7230,14 +7219,8 @@ packages:
     resolution: {integrity: sha512-4luGP9LMYszMRZwsvyUd9MrxgEGZdZuZgpVQHEEX0lCYFESasVRvZd0EYpCkOIbJKHMuv0LskpXc/8Un+MJzEQ==}
     hasBin: true
 
-  update-browserslist-db@1.1.1:
-    resolution: {integrity: sha512-R8UzCaa9Az+38REPiJ1tXlImTJXlVfgHZsglwBD/k6nj76ctsH1E3q4doGrukiLQd3sGQYu56r5+lo5r94l29A==}
-    hasBin: true
-    peerDependencies:
-      browserslist: '>= 4.21.0'
-
-  update-browserslist-db@1.3.1:
-    resolution: {integrity: sha512-ZZ61DsRsOnakl74HAmp3oSN4aXUmEWXf+i/yv0h7tIBfICc3VdrFErQKUUKPgu3AMsTUMbcongALEN4l6GSUrQ==}
+  update-browserslist-db@1.3.4:
+    resolution: {integrity: sha512-t8wonIOdQyOjtPd2VktlBu6QjTVTks6v8bSi7kd0r2Vll8TK1JYDZtRRdbmCHOAMphkZgrzK+L+vXK4pyZ8t4A==}
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
@@ -7642,7 +7625,7 @@ snapshots:
     dependencies:
       '@babel/compat-data': 7.26.3
       '@babel/helper-validator-option': 7.25.9
-      browserslist: 4.24.3
+      browserslist: 4.29.4
       lru-cache: 5.1.1
       semver: 6.3.1
 
@@ -8622,14 +8605,14 @@ snapshots:
 
   '@netlify/content-engine-graphiql-explorer@1.1.0': {}
 
-  '@netlify/content-engine@0.8.2(debug@2.6.9(supports-color@9.4.0))(supports-color@9.4.0)':
+  '@netlify/content-engine@0.8.2(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)':
     dependencies:
       '@babel/code-frame': 7.26.2
       '@babel/types': 7.26.3
       '@jridgewell/trace-mapping': 0.3.25
       '@netlify/content-engine-graphiql-explorer': 0.0.4
       address: 1.2.2
-      axios: 0.21.4(debug@2.6.9(supports-color@9.4.0))
+      axios: 0.21.4(debug@4.3.7(supports-color@9.4.0))
       better-opn: 2.1.1
       cache-manager: 2.11.1
       chalk: 4.1.2
@@ -8716,7 +8699,7 @@ snapshots:
       - debug
       - supports-color
 
-  '@netlify/content-engine@1.5.0(@google-cloud/storage@5.20.5(supports-color@9.4.0))(debug@2.6.9(supports-color@9.4.0))(supports-color@9.4.0)':
+  '@netlify/content-engine@1.5.0(@google-cloud/storage@5.20.5(supports-color@9.4.0))(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)':
     dependencies:
       '@babel/code-frame': 7.26.2
       '@babel/types': 7.26.3
@@ -8726,7 +8709,7 @@ snapshots:
       '@pnpm/exec': 2.0.0
       address: 1.2.2
       async-mutex: 0.5.0
-      axios: 1.20.0(debug@2.6.9(supports-color@9.4.0))(supports-color@9.4.0)
+      axios: 1.20.0(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)
       better-opn: 2.1.1
       cache-manager: 2.11.1
       chalk: 4.1.2
@@ -9015,18 +8998,18 @@ snapshots:
       - supports-color
       - ts-node
 
-  '@netlify/sdk@1.67.0(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)':
+  '@netlify/sdk@1.67.0(debug@4.3.7(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)':
     dependencies:
       '@commander-js/extra-typings': 12.1.0(commander@12.1.0)
       '@graphql-tools/stitch': 9.4.10(graphql@16.10.0)
       '@graphql-tools/utils': 10.6.4(graphql@16.10.0)
       '@graphql-tools/wrap': 10.0.26(graphql@16.10.0)
-      '@netlify/content-engine': 0.8.2(debug@2.6.9(supports-color@9.4.0))(supports-color@9.4.0)
+      '@netlify/content-engine': 0.8.2(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)
       '@netlify/functions': 2.8.2
       '@netlify/integrations': 0.6.0
       '@netlify/sdk--extension-api-client': 0.1.1
       '@sindresorhus/slugify': 2.2.1
-      '@stackbit/dev': 1.0.35(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)
+      '@stackbit/dev': 1.0.35(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)
       '@types/configstore': 6.0.2
       camelcase: 8.0.0
       chalk: 5.3.0
@@ -9055,21 +9038,18 @@ snapshots:
       zod-to-json-schema: 3.24.1(zod@3.24.1)
       zod-validation-error: 2.1.0(zod@3.24.1)
     transitivePeerDependencies:
-      - bufferutil
-      - canvas
       - debug
       - encoding
       - graphql
       - supports-color
-      - utf-8-validate
 
-  '@netlify/sdk@2.14.1(@google-cloud/storage@5.20.5(supports-color@9.4.0))(@trpc/server@11.0.0-rc.477)(@types/react@19.2.18)(autoprefixer@10.5.4(postcss@8.5.20))(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(postcss@8.5.20)(react-dom@19.0.0(react@19.2.8))(react@19.2.8)(supports-color@9.4.0)(tailwindcss@3.4.16(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2)))(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2))':
+  '@netlify/sdk@2.14.1(@google-cloud/storage@5.20.5(supports-color@9.4.0))(@trpc/server@11.0.0-rc.477)(@types/react@19.2.18)(autoprefixer@10.5.4(postcss@8.5.20))(debug@4.3.7(supports-color@9.4.0))(graphql@16.10.0)(postcss@8.5.20)(react-dom@19.0.0(react@19.2.8))(react@19.2.8)(supports-color@9.4.0)(tailwindcss@3.4.16(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2)))(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2))':
     dependencies:
       '@commander-js/extra-typings': 12.1.0(commander@12.1.0)
       '@graphql-tools/stitch': 9.4.10(graphql@16.10.0)
       '@graphql-tools/utils': 10.6.4(graphql@16.10.0)
       '@graphql-tools/wrap': 10.0.26(graphql@16.10.0)
-      '@netlify/content-engine': 1.5.0(@google-cloud/storage@5.20.5(supports-color@9.4.0))(debug@2.6.9(supports-color@9.4.0))(supports-color@9.4.0)
+      '@netlify/content-engine': 1.5.0(@google-cloud/storage@5.20.5(supports-color@9.4.0))(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)
       '@netlify/functions': 2.8.2
       '@netlify/integrations': 0.6.0
       '@netlify/sdk--extension-api-client': 2.4.0
@@ -9077,7 +9057,7 @@ snapshots:
       '@netlify/sdk--ui-functions': 1.4.1(@trpc/server@11.0.0-rc.477)
       '@netlify/sdk--ui-react': 1.14.1(@types/react@19.2.18)(autoprefixer@10.5.4(postcss@8.5.20))(postcss@8.5.20)(react-dom@19.0.0(react@19.2.8))(react@19.2.8)(supports-color@9.4.0)(tailwindcss@3.4.16(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2)))(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2))
       '@sindresorhus/slugify': 2.2.1
-      '@stackbit/dev': 1.0.35(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)
+      '@stackbit/dev': 1.0.35(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)
       '@types/configstore': 6.0.2
       camelcase: 8.0.0
       chalk: 5.3.0
@@ -9112,8 +9092,6 @@ snapshots:
       - '@trpc/server'
       - '@types/react'
       - autoprefixer
-      - bufferutil
-      - canvas
       - debug
       - encoding
       - graphql
@@ -9123,7 +9101,6 @@ snapshots:
       - supports-color
       - tailwindcss
       - ts-node
-      - utf-8-validate
 
   '@netlify/serverless-functions-api@1.26.1':
     dependencies:
@@ -9599,10 +9576,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@sanity/client@6.24.1(debug@2.6.9(supports-color@9.4.0))':
+  '@sanity/client@6.24.1(debug@4.3.7(supports-color@9.4.0))':
     dependencies:
       '@sanity/eventsource': 5.0.2
-      get-it: 8.6.5(debug@2.6.9(supports-color@9.4.0))
+      get-it: 8.6.5(debug@4.3.7(supports-color@9.4.0))
       rxjs: 7.8.1
     transitivePeerDependencies:
       - debug
@@ -9646,9 +9623,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@sanity/types@3.67.1(debug@2.6.9(supports-color@9.4.0))':
+  '@sanity/types@3.67.1(debug@4.3.7(supports-color@9.4.0))':
     dependencies:
-      '@sanity/client': 6.24.1(debug@2.6.9(supports-color@9.4.0))
+      '@sanity/client': 6.24.1(debug@4.3.7(supports-color@9.4.0))
       '@types/react': 18.3.16
     transitivePeerDependencies:
       - debug
@@ -9709,32 +9686,31 @@ snapshots:
 
   '@stackbit/artisanal-names@1.0.1': {}
 
-  '@stackbit/cms-contentful@0.4.56(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)':
+  '@stackbit/cms-contentful@0.4.56(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)':
     dependencies:
       '@contentful/rich-text-types': 15.15.1
-      '@stackbit/cms-core': 2.0.1(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)
+      '@stackbit/cms-core': 2.0.1(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)
       '@stackbit/types': 1.0.1
       '@stackbit/utils': 0.4.19
-      contentful: 9.3.7(debug@2.6.9(supports-color@9.4.0))(supports-color@9.4.0)
-      contentful-management: 7.54.2(debug@2.6.9(supports-color@9.4.0))
+      contentful: 9.3.7(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)
+      contentful-management: 7.54.2(debug@4.3.7(supports-color@9.4.0))
       lodash: 4.17.21
     transitivePeerDependencies:
       - debug
       - encoding
-      - graphql
       - supports-color
 
-  '@stackbit/cms-core@2.0.1(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)':
+  '@stackbit/cms-core@2.0.1(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)':
     dependencies:
       '@babel/parser': 7.26.3
       '@babel/traverse': 7.26.4(supports-color@9.4.0)
       '@iarna/toml': 2.2.5
-      '@netlify/sdk': 1.67.0(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)
+      '@netlify/sdk': 1.67.0(debug@4.3.7(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)
       '@stackbit/sdk': 2.0.1
       '@stackbit/types': 1.0.1
       '@stackbit/utils': 0.4.19
       chalk: 4.1.2
-      content-engine: 0.0.29(debug@2.6.9(supports-color@9.4.0))(supports-color@9.4.0)
+      content-engine: 0.0.29(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)
       esm: 3.2.25
       fs-extra: 8.1.0
       glob: 7.2.3
@@ -9748,43 +9724,34 @@ snapshots:
       slugify: 1.6.6
       uuid: 9.0.1
     transitivePeerDependencies:
-      - bufferutil
-      - canvas
       - debug
       - encoding
-      - graphql
       - supports-color
-      - utf-8-validate
 
-  '@stackbit/cms-git@0.4.18(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)':
+  '@stackbit/cms-git@0.4.18(debug@4.3.7(supports-color@9.4.0))':
     dependencies:
       '@stackbit/artisanal-names': 1.0.1
-      '@stackbit/cms-core': 2.0.1(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)
+      '@stackbit/cms-core': 2.0.1(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)
       '@stackbit/sdk': 2.0.1
       '@stackbit/types': 1.0.1
       '@stackbit/utils': 0.4.19
-      axios: 0.24.0(debug@2.6.9(supports-color@9.4.0))
+      axios: 0.24.0(debug@4.3.7(supports-color@9.4.0))
       fs-extra: 11.2.0
       git-url-parse: 13.1.1
       lodash: 4.17.21
       micromatch: 4.0.8
       slugify: 1.6.6
     transitivePeerDependencies:
-      - bufferutil
-      - canvas
       - debug
       - encoding
-      - graphql
-      - supports-color
-      - utf-8-validate
 
-  '@stackbit/cms-sanity@0.2.56(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)':
+  '@stackbit/cms-sanity@0.2.56(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)':
     dependencies:
       '@sanity/block-tools': 2.36.6
       '@sanity/client': 3.4.1(supports-color@9.4.0)
       '@sanity/schema': 2.36.6(supports-color@9.4.0)
-      '@sanity/types': 3.67.1(debug@2.6.9(supports-color@9.4.0))
-      '@stackbit/cms-core': 2.0.1(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)
+      '@sanity/types': 3.67.1(debug@4.3.7(supports-color@9.4.0))
+      '@stackbit/cms-core': 2.0.1(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)
       '@stackbit/types': 1.0.1
       '@stackbit/utils': 0.4.19
       fs-extra: 9.1.0
@@ -9797,23 +9764,21 @@ snapshots:
       - bufferutil
       - canvas
       - debug
-      - encoding
-      - graphql
       - supports-color
       - utf-8-validate
 
-  '@stackbit/dev-common@0.5.51(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)':
+  '@stackbit/dev-common@0.5.51(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)':
     dependencies:
       '@iarna/toml': 2.2.5
       '@stackbit/artisanal-names': 1.0.1
-      '@stackbit/cms-contentful': 0.4.56(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)
-      '@stackbit/cms-core': 2.0.1(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)
-      '@stackbit/cms-git': 0.4.18(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)
-      '@stackbit/cms-sanity': 0.2.56(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)
+      '@stackbit/cms-contentful': 0.4.56(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)
+      '@stackbit/cms-core': 2.0.1(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)
+      '@stackbit/cms-git': 0.4.18(debug@4.3.7(supports-color@9.4.0))
+      '@stackbit/cms-sanity': 0.2.56(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)
       '@stackbit/sdk': 2.0.1
       '@stackbit/types': 1.0.1
       '@stackbit/utils': 0.4.19
-      axios: 0.25.0(debug@2.6.9(supports-color@9.4.0))
+      axios: 0.25.0(debug@4.3.7(supports-color@9.4.0))
       chalk: 4.1.2
       configstore: 5.0.1
       detect-port: 1.6.1(supports-color@9.4.0)
@@ -9832,20 +9797,18 @@ snapshots:
       uuid: 8.3.2
     transitivePeerDependencies:
       - bufferutil
-      - canvas
       - debug
       - encoding
-      - graphql
       - supports-color
       - utf-8-validate
 
-  '@stackbit/dev@1.0.35(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)':
+  '@stackbit/dev@1.0.35(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)':
     dependencies:
-      '@stackbit/cms-core': 2.0.1(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)
-      '@stackbit/cms-git': 0.4.18(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)
-      '@stackbit/dev-common': 0.5.51(debug@2.6.9(supports-color@9.4.0))(graphql@16.10.0)(supports-color@9.4.0)
+      '@stackbit/cms-core': 2.0.1(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)
+      '@stackbit/cms-git': 0.4.18(debug@4.3.7(supports-color@9.4.0))
+      '@stackbit/dev-common': 0.5.51(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)
       '@stackbit/sdk': 2.0.1
-      axios: 0.25.0(debug@2.6.9(supports-color@9.4.0))
+      axios: 0.25.0(debug@4.3.7(supports-color@9.4.0))
       chalk: 4.1.2
       chokidar: 3.6.0
       configstore: 5.0.1
@@ -9854,7 +9817,7 @@ snapshots:
       dotenv: 16.4.7
       express: 4.21.2(supports-color@9.4.0)
       fs-extra: 10.1.0
-      http-proxy-middleware: 0.20.0(debug@2.6.9(supports-color@9.4.0))
+      http-proxy-middleware: 0.20.0(debug@4.3.7(supports-color@9.4.0))
       lodash: 4.17.21
       open: 8.4.2
       rimraf: 3.0.2
@@ -9862,13 +9825,9 @@ snapshots:
       winston: 3.17.0
       yargs: 17.7.2
     transitivePeerDependencies:
-      - bufferutil
-      - canvas
       - debug
       - encoding
-      - graphql
       - supports-color
-      - utf-8-validate
 
   '@stackbit/sdk@2.0.1':
     dependencies:
@@ -10479,7 +10438,7 @@ snapshots:
 
   autoprefixer@10.5.4(postcss@8.5.20):
     dependencies:
-      browserslist: 4.28.8
+      browserslist: 4.29.4
       caniuse-lite: 1.0.30001809
       fraction.js: 5.3.4
       picocolors: 1.1.1
@@ -10491,27 +10450,27 @@ snapshots:
       '@fastify/error': 3.4.1
       fastq: 1.17.1
 
-  axios@0.21.4(debug@2.6.9(supports-color@9.4.0)):
+  axios@0.21.4(debug@4.3.7(supports-color@9.4.0)):
     dependencies:
-      follow-redirects: 1.16.0(debug@2.6.9(supports-color@9.4.0))
+      follow-redirects: 1.16.0(debug@4.3.7(supports-color@9.4.0))
     transitivePeerDependencies:
       - debug
 
-  axios@0.24.0(debug@2.6.9(supports-color@9.4.0)):
+  axios@0.24.0(debug@4.3.7(supports-color@9.4.0)):
     dependencies:
-      follow-redirects: 1.16.0(debug@2.6.9(supports-color@9.4.0))
+      follow-redirects: 1.16.0(debug@4.3.7(supports-color@9.4.0))
     transitivePeerDependencies:
       - debug
 
-  axios@0.25.0(debug@2.6.9(supports-color@9.4.0)):
+  axios@0.25.0(debug@4.3.7(supports-color@9.4.0)):
     dependencies:
-      follow-redirects: 1.16.0(debug@2.6.9(supports-color@9.4.0))
+      follow-redirects: 1.16.0(debug@4.3.7(supports-color@9.4.0))
     transitivePeerDependencies:
       - debug
 
-  axios@1.20.0(debug@2.6.9(supports-color@9.4.0))(supports-color@9.4.0):
+  axios@1.20.0(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0):
     dependencies:
-      follow-redirects: 1.16.0(debug@2.6.9(supports-color@9.4.0))
+      follow-redirects: 1.16.0(debug@4.3.7(supports-color@9.4.0))
       form-data: 4.0.6
       https-proxy-agent: 5.0.1(supports-color@9.4.0)
       proxy-from-env: 2.1.0
@@ -10560,7 +10519,7 @@ snapshots:
 
   base64id@2.0.0: {}
 
-  baseline-browser-mapping@2.11.16: {}
+  baseline-browser-mapping@2.11.30: {}
 
   before-after-hook@2.2.3: {}
 
@@ -10659,20 +10618,13 @@ snapshots:
     dependencies:
       fill-range: 7.1.1
 
-  browserslist@4.24.3:
+  browserslist@4.29.4:
     dependencies:
-      caniuse-lite: 1.0.30001688
-      electron-to-chromium: 1.5.73
-      node-releases: 2.0.19
-      update-browserslist-db: 1.1.1(browserslist@4.24.3)
-
-  browserslist@4.28.8:
-    dependencies:
-      baseline-browser-mapping: 2.11.16
-      caniuse-lite: 1.0.30001809
-      electron-to-chromium: 1.5.411
-      node-releases: 2.0.53
-      update-browserslist-db: 1.3.1(browserslist@4.28.8)
+      baseline-browser-mapping: 2.11.30
+      caniuse-lite: 1.0.30001818
+      electron-to-chromium: 1.5.463
+      node-releases: 2.0.59
+      update-browserslist-db: 1.3.4(browserslist@4.29.4)
 
   buffer-crc32@0.2.13: {}
 
@@ -10772,9 +10724,9 @@ snapshots:
 
   camelcase@8.0.0: {}
 
-  caniuse-lite@1.0.30001688: {}
-
   caniuse-lite@1.0.30001809: {}
+
+  caniuse-lite@1.0.30001818: {}
 
   capture-stack-trace@1.0.2: {}
 
@@ -11050,7 +11002,7 @@ snapshots:
 
   content-engine-graphiql-explorer@0.0.1: {}
 
-  content-engine@0.0.29(debug@2.6.9(supports-color@9.4.0))(supports-color@9.4.0):
+  content-engine@0.0.29(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0):
     dependencies:
       '@babel/code-frame': 7.26.2
       '@babel/core': 7.26.0(supports-color@9.4.0)
@@ -11059,7 +11011,7 @@ snapshots:
       '@babel/types': 7.26.3
       '@jridgewell/trace-mapping': 0.3.25
       address: 1.2.2
-      axios: 0.21.4(debug@2.6.9(supports-color@9.4.0))
+      axios: 0.21.4(debug@4.3.7(supports-color@9.4.0))
       better-opn: 2.1.1
       bluebird: 3.7.2
       cache-manager: 2.11.1
@@ -11127,10 +11079,10 @@ snapshots:
 
   content-type@1.0.5: {}
 
-  contentful-management@7.54.2(debug@2.6.9(supports-color@9.4.0)):
+  contentful-management@7.54.2(debug@4.3.7(supports-color@9.4.0)):
     dependencies:
       '@types/json-patch': 0.0.30
-      axios: 0.21.4(debug@2.6.9(supports-color@9.4.0))
+      axios: 0.21.4(debug@4.3.7(supports-color@9.4.0))
       contentful-sdk-core: 6.11.0
       fast-copy: 2.1.7
       lodash.isplainobject: 4.0.6
@@ -11158,10 +11110,10 @@ snapshots:
       p-throttle: 4.1.1
       qs: 6.13.1
 
-  contentful@9.3.7(debug@2.6.9(supports-color@9.4.0))(supports-color@9.4.0):
+  contentful@9.3.7(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0):
     dependencies:
       '@contentful/rich-text-types': 16.8.5
-      axios: 1.20.0(debug@2.6.9(supports-color@9.4.0))(supports-color@9.4.0)
+      axios: 1.20.0(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)
       contentful-resolve-response: 1.9.2
       contentful-sdk-core: 8.3.2
       fast-copy: 2.1.7
@@ -11622,9 +11574,7 @@ snapshots:
 
   ee-first@1.1.1: {}
 
-  electron-to-chromium@1.5.411: {}
-
-  electron-to-chromium@1.5.73: {}
+  electron-to-chromium@1.5.463: {}
 
   emoji-regex-xs@1.0.0: {}
 
@@ -12486,12 +12436,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  get-it@8.6.5(debug@2.6.9(supports-color@9.4.0)):
+  get-it@8.6.5(debug@4.3.7(supports-color@9.4.0)):
     dependencies:
       '@types/follow-redirects': 1.14.4
       '@types/progress-stream': 2.0.5
       decompress-response: 7.0.0
-      follow-redirects: 1.16.0(debug@2.6.9(supports-color@9.4.0))
+      follow-redirects: 1.16.0(debug@4.3.7(supports-color@9.4.0))
       is-retry-allowed: 2.2.0
       progress-stream: 2.0.0
       tunnel-agent: 0.6.0
@@ -12872,9 +12822,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  http-proxy-middleware@0.20.0(debug@2.6.9(supports-color@9.4.0)):
+  http-proxy-middleware@0.20.0(debug@4.3.7(supports-color@9.4.0)):
     dependencies:
-      http-proxy: 1.18.1(debug@2.6.9(supports-color@9.4.0))
+      http-proxy: 1.18.1(debug@4.3.7(supports-color@9.4.0))
       is-glob: 4.0.3
       lodash: 4.17.21
       micromatch: 4.0.8
@@ -12888,14 +12838,6 @@ snapshots:
       is-glob: 4.0.3
       is-plain-obj: 3.0.0
       micromatch: 4.0.8
-    transitivePeerDependencies:
-      - debug
-
-  http-proxy@1.18.1(debug@2.6.9(supports-color@9.4.0)):
-    dependencies:
-      eventemitter3: 4.0.7
-      follow-redirects: 1.16.0(debug@2.6.9(supports-color@9.4.0))
-      requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
 
@@ -14293,9 +14235,7 @@ snapshots:
 
   node-object-hash@2.3.10: {}
 
-  node-releases@2.0.19: {}
-
-  node-releases@2.0.53: {}
+  node-releases@2.0.59: {}
 
   node-source-walk@6.0.2:
     dependencies:
@@ -16042,15 +15982,9 @@ snapshots:
       consola: 3.2.3
       pathe: 1.1.2
 
-  update-browserslist-db@1.1.1(browserslist@4.24.3):
+  update-browserslist-db@1.3.4(browserslist@4.29.4):
     dependencies:
-      browserslist: 4.24.3
-      escalade: 3.2.0
-      picocolors: 1.1.1
-
-  update-browserslist-db@1.3.1(browserslist@4.28.8):
-    dependencies:
-      browserslist: 4.28.8
+      browserslist: 4.29.4
       escalade: 3.2.0
       picocolors: 1.1.1
 
