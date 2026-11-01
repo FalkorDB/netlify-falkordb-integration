@@ -3971,8 +3971,8 @@ packages:
   folder-walker@3.2.0:
     resolution: {integrity: sha512-VjAQdSLsl6AkpZNyrQJfO7BXLo4chnStqb055bumZMbRUPpVuPN3a4ktsnRCmrFZjtMlYLkyXiR5rAs4WOpC4Q==}
 
-  follow-redirects@1.16.0:
-    resolution: {integrity: sha512-y5rN/uOsadFT/JfYwhxRS5R7Qce+g3zG97+JrtFZlC9klX/W5hD7iiLzScI4nZqUS7DNUdhPgw4xI8W2LuXlUw==}
+  follow-redirects@1.16.2:
+    resolution: {integrity: sha512-/kVP2U8z596Ia0gwFrwyIeo74ta5aVmSeU1FfAUMAmcEP5EP7zydmag3SLiN64NaRKef3lxsq7i/g7ltJQDGow==}
     engines: {node: '>=4.0'}
     peerDependencies:
       debug: '*'
@@ -10476,25 +10476,25 @@ snapshots:
 
   axios@0.21.4(debug@4.3.7(supports-color@9.4.0)):
     dependencies:
-      follow-redirects: 1.16.0(debug@4.3.7(supports-color@9.4.0))
+      follow-redirects: 1.16.2(debug@4.3.7(supports-color@9.4.0))
     transitivePeerDependencies:
       - debug
 
   axios@0.24.0(debug@4.3.7(supports-color@9.4.0)):
     dependencies:
-      follow-redirects: 1.16.0(debug@4.3.7(supports-color@9.4.0))
+      follow-redirects: 1.16.2(debug@4.3.7(supports-color@9.4.0))
     transitivePeerDependencies:
       - debug
 
   axios@0.25.0(debug@4.3.7(supports-color@9.4.0)):
     dependencies:
-      follow-redirects: 1.16.0(debug@4.3.7(supports-color@9.4.0))
+      follow-redirects: 1.16.2(debug@4.3.7(supports-color@9.4.0))
     transitivePeerDependencies:
       - debug
 
   axios@1.20.0(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0):
     dependencies:
-      follow-redirects: 1.16.0(debug@4.3.7(supports-color@9.4.0))
+      follow-redirects: 1.16.2(debug@4.3.7(supports-color@9.4.0))
       form-data: 4.0.6
       https-proxy-agent: 5.0.1(supports-color@9.4.0)
       proxy-from-env: 2.1.0
@@ -12299,11 +12299,11 @@ snapshots:
     dependencies:
       from2: 2.3.0
 
-  follow-redirects@1.16.0(debug@2.6.9(supports-color@9.4.0)):
+  follow-redirects@1.16.2(debug@2.6.9(supports-color@9.4.0)):
     optionalDependencies:
       debug: 2.6.9(supports-color@9.4.0)
 
-  follow-redirects@1.16.0(debug@4.3.7(supports-color@9.4.0)):
+  follow-redirects@1.16.2(debug@4.3.7(supports-color@9.4.0)):
     optionalDependencies:
       debug: 4.3.7(supports-color@9.4.0)
 
@@ -12451,7 +12451,7 @@ snapshots:
       create-error-class: 3.0.2
       debug: 2.6.9(supports-color@9.4.0)
       decompress-response: 6.0.0
-      follow-redirects: 1.16.0(debug@2.6.9(supports-color@9.4.0))
+      follow-redirects: 1.16.2(debug@2.6.9(supports-color@9.4.0))
       form-urlencoded: 2.0.9
       into-stream: 3.1.0
       is-plain-object: 2.0.4
@@ -12473,7 +12473,7 @@ snapshots:
       '@types/follow-redirects': 1.14.4
       '@types/progress-stream': 2.0.5
       decompress-response: 7.0.0
-      follow-redirects: 1.16.0(debug@4.3.7(supports-color@9.4.0))
+      follow-redirects: 1.16.2(debug@4.3.7(supports-color@9.4.0))
       is-retry-allowed: 2.2.0
       progress-stream: 2.0.0
       tunnel-agent: 0.6.0
@@ -12876,7 +12876,7 @@ snapshots:
   http-proxy@1.18.1(debug@4.3.7(supports-color@9.4.0)):
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.16.0(debug@4.3.7(supports-color@9.4.0))
+      follow-redirects: 1.16.2(debug@4.3.7(supports-color@9.4.0))
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
