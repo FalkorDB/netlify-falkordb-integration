@@ -3805,8 +3805,8 @@ packages:
   fast-content-type-parse@1.1.0:
     resolution: {integrity: sha512-fBHHqSTFLVnR61C+gltJuE5GkVQMV0S2nqUO8TJ+5Z3qAKG8vAx4FKai1s5jq/inV1+sREynIWSuQ6HgoSXpDQ==}
 
-  fast-copy@2.1.7:
-    resolution: {integrity: sha512-ozrGwyuCTAy7YgFCua8rmqmytECYk/JYAMXcswOcm0qvGoE3tPb7ivBeIHTOK2DiapBhDZgacIhzhQIKU5TCfA==}
+  fast-copy@2.2.0:
+    resolution: {integrity: sha512-+T1bBiRiRGn7aKFqD0FEebYEzYgqK/uOlKCy2stsAgqSRI4T7nxmoTd1i8XmaGXp9B47yYXvx+V65yoz3DFAUw==}
 
   fast-decode-uri-component@1.0.1:
     resolution: {integrity: sha512-WKgKWg5eUxvRZGwW8FvfbaH7AXSh2cL+3j5fMGzUMCxWBJ3dV3a7Wz8y2f/uQ0e3B6WmodD3oS54jTQ9HVTIIg==}
@@ -11108,7 +11108,7 @@ snapshots:
       '@types/json-patch': 0.0.30
       axios: 0.21.4(debug@4.3.7(supports-color@9.4.0))
       contentful-sdk-core: 6.11.0
-      fast-copy: 2.1.7
+      fast-copy: 2.2.0
       lodash.isplainobject: 4.0.6
       type-fest: 2.19.0
     transitivePeerDependencies:
@@ -11116,11 +11116,11 @@ snapshots:
 
   contentful-resolve-response@1.9.2:
     dependencies:
-      fast-copy: 2.1.7
+      fast-copy: 2.2.0
 
   contentful-sdk-core@6.11.0:
     dependencies:
-      fast-copy: 2.1.7
+      fast-copy: 2.2.0
       lodash.isplainobject: 4.0.6
       lodash.isstring: 4.0.1
       p-throttle: 4.1.1
@@ -11128,7 +11128,7 @@ snapshots:
 
   contentful-sdk-core@8.3.2:
     dependencies:
-      fast-copy: 2.1.7
+      fast-copy: 2.2.0
       lodash.isplainobject: 4.0.6
       lodash.isstring: 4.0.1
       p-throttle: 4.1.1
@@ -11140,7 +11140,7 @@ snapshots:
       axios: 1.20.0(debug@4.3.7(supports-color@9.4.0))(supports-color@9.4.0)
       contentful-resolve-response: 1.9.2
       contentful-sdk-core: 8.3.2
-      fast-copy: 2.1.7
+      fast-copy: 2.2.0
       json-stringify-safe: 5.0.1
     transitivePeerDependencies:
       - debug
@@ -12096,7 +12096,7 @@ snapshots:
 
   fast-content-type-parse@1.1.0: {}
 
-  fast-copy@2.1.7: {}
+  fast-copy@2.2.0: {}
 
   fast-decode-uri-component@1.0.1: {}
 
