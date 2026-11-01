@@ -4797,8 +4797,8 @@ packages:
     resolution: {integrity: sha512-yPBThwecp1wS9DmoA4x4KR2h3QoslacnDR8ypuFM962kI4/456Iy1oHx2RAgh4jfZNdn0bctsdadceiBUgpU1g==}
     hasBin: true
 
-  joi@17.13.3:
-    resolution: {integrity: sha512-otDA4ldcIx+ZXsKHWmp0YizCweVRZG96J10b0FevjfuncLO1oX59THoAmHkNubYJ+9gWsYsp5k8v4ib6oDv1fA==}
+  joi@17.13.9:
+    resolution: {integrity: sha512-llFCT2rVtfwgBCaIqxtjim+iHqrgss4ONiGSYiiGH9jnjWq90ppSRffqmqKvwpa8W+YfILyQV6XyGcegXX2T4g==}
 
   js-string-escape@1.0.1:
     resolution: {integrity: sha512-Smw4xcfIQ5LVjAOuJCvN/zIodzA/BBSsluuoSykP+lUvScIi4U6RJLfwHet5cxFnCswUjISV8oAXaqaJDY3chg==}
@@ -8667,7 +8667,7 @@ snapshots:
       invariant: 2.2.4
       is-relative: 1.0.0
       is-relative-url: 3.0.0
-      joi: 17.13.3
+      joi: 17.13.9
       lmdb: 2.5.3
       lodash.camelcase: 4.3.0
       lodash.clonedeep: 4.5.0
@@ -8765,7 +8765,7 @@ snapshots:
       invariant: 2.2.4
       is-relative: 1.0.0
       is-relative-url: 3.0.0
-      joi: 17.13.3
+      joi: 17.13.9
       lmdb: 2.5.3
       lodash.camelcase: 4.3.0
       lodash.clonedeep: 4.5.0
@@ -9862,7 +9862,7 @@ snapshots:
       chokidar: 3.6.0
       esbuild: 0.19.12
       fs-extra: 9.1.0
-      joi: 17.13.3
+      joi: 17.13.9
       js-yaml: 4.1.0
       lodash: 4.17.21
       micromatch: 4.0.8
@@ -11075,7 +11075,7 @@ snapshots:
       invariant: 2.2.4
       is-relative: 1.0.0
       is-relative-url: 3.0.0
-      joi: 17.13.3
+      joi: 17.13.9
       lmdb: 2.5.3
       lodash: 4.17.21
       meant: 1.0.3
@@ -13244,7 +13244,7 @@ snapshots:
 
   jiti@2.4.1: {}
 
-  joi@17.13.3:
+  joi@17.13.9:
     dependencies:
       '@hapi/hoek': 9.3.0
       '@hapi/topo': 5.1.0
