@@ -39,8 +39,8 @@ importers:
         specifier: ^19.0.0
         version: 19.0.0(react@19.2.8)
       zod:
-        specifier: ^3.24.1
-        version: 3.24.1
+        specifier: ^4.6.6
+        version: 4.6.7
     devDependencies:
       '@netlify/netlify-plugin-netlify-extension':
         specifier: ^1.2.2
@@ -7589,6 +7589,9 @@ packages:
 
   zod@3.24.1:
     resolution: {integrity: sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A==}
+
+  zod@4.6.7:
+    resolution: {integrity: sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -16309,5 +16312,7 @@ snapshots:
   zod@3.23.8: {}
 
   zod@3.24.1: {}
+
+  zod@4.6.7: {}
 
   zwitch@2.0.4: {}
