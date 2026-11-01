@@ -5425,8 +5425,8 @@ packages:
     resolution: {integrity: sha512-vSKdIUO61iCmTqhdoIDrqyrtp87nWZUmBPniNjO0fX49wEYmyDO4lvlnFXiGcaH1JLE/s/9HbiK4LSHsbiUY6Q==}
     deprecated: This library has been deprecated in favor of micro-memoize, which as-of version 5 incorporates most of the functionality that this library offers at nearly half the size and better speed.
 
-  moment@2.30.1:
-    resolution: {integrity: sha512-uEmtNhbDOrWPFS+hdjFCBfy9f2YoyzRpwcl+DqpC6taX21FzsTLQVbMV/W7PzNSX6x/bhC1zA3c2UQ5NzH6how==}
+  moment@2.31.0:
+    resolution: {integrity: sha512-0acOTfMiWOheYS4eoWb80yYMb/JLvVv9SHbs2PehaDzfUG0Bw855SKyk0IKTnPGa5+U2bmi3W68l1+sGLX/pvw==}
 
   move-file@3.1.0:
     resolution: {integrity: sha512-4aE3U7CCBWgrQlQDMq8da4woBWDGHioJFiOZ8Ie6Yq2uwYQ9V2kGhTz4x3u6Wc+OU17nw0yc3rJ/lQ4jIiPe3A==}
@@ -8691,7 +8691,7 @@ snapshots:
       memoizee: 0.4.17
       micromatch: 4.0.8
       mime: 3.0.0
-      moment: 2.30.1
+      moment: 2.31.0
       node-html-parser: 5.4.2
       node-object-hash: 2.3.10
       normalize-path: 3.0.0
@@ -8790,7 +8790,7 @@ snapshots:
       micromatch: 4.0.8
       mime: 3.0.0
       minizlib: 3.0.1
-      moment: 2.30.1
+      moment: 2.31.0
       node-html-parser: 5.4.2
       node-object-hash: 2.3.10
       normalize-path: 3.0.0
@@ -9735,7 +9735,7 @@ snapshots:
       js-yaml: 3.14.1
       lodash: 4.17.21
       micromatch: 4.0.8
-      moment: 2.30.1
+      moment: 2.31.0
       parse5: 6.0.1
       sanitize-filename: 1.6.3
       slugify: 1.6.6
@@ -9805,7 +9805,7 @@ snapshots:
       git-url-parse: 13.1.1
       js-yaml: 3.14.1
       lodash: 4.17.21
-      moment: 2.30.1
+      moment: 2.31.0
       rimraf: 3.0.2
       sanitize-filename: 1.6.3
       semver: 7.6.3
@@ -9859,7 +9859,7 @@ snapshots:
       js-yaml: 4.1.0
       lodash: 4.17.21
       micromatch: 4.0.8
-      moment: 2.30.1
+      moment: 2.31.0
       semver: 7.6.3
     transitivePeerDependencies:
       - encoding
@@ -11075,7 +11075,7 @@ snapshots:
       memoizee: 0.4.17
       micromatch: 4.0.8
       mime: 3.0.0
-      moment: 2.30.1
+      moment: 2.31.0
       node-html-parser: 5.4.2
       node-object-hash: 2.3.10
       normalize-path: 3.0.0
@@ -13987,7 +13987,7 @@ snapshots:
       fast-equals: 3.0.3
       micro-memoize: 4.1.2
 
-  moment@2.30.1: {}
+  moment@2.31.0: {}
 
   move-file@3.1.0:
     dependencies:
